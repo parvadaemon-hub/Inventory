@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Scanner Table</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="toolbar">
+        <div class="brand-block">
+          <img class="site-logo" src="assets/phonecircle-logo.svg" alt="PHONECIRCLE" />
+          <h1>Product Scanner</h1>
+          <p>Scan a barcode or QR code, then complete the row details.</p>
+        </div>
+        <div class="toolbar-actions">
+          <button id="openSettings" type="button" class="secondary">Settings</button>
+          <button id="cameraToggle" type="button">Camera Scan</button>
+          <button id="exportCsv" type="button">Export CSV</button>
+          <button id="clearRows" type="button" class="danger">Clear Rows</button>
+        </div>
+      </section>
+
+      <section class="scan-panel" aria-label="Scanner input">
+        <div class="scan-row">
+          <button id="scanFocus" type="button" class="scan-button">Scan</button>
+          <input
+            id="scanInput"
+            type="search"
+            autocomplete="off"
+            placeholder="Scan barcode/QR code or search saved products"
+            autofocus
+          />
+          <button id="addScan" type="button">Add</button>
+        </div>
+        <p class="hint">
+          Press Enter to add the typed or scanned code. Matching saved rows stay visible while you type.
+        </p>
+      </section>
+
+      <section id="cameraPanel" class="camera-panel hidden" aria-label="Camera scanner">
+        <video id="cameraPreview" playsinline muted></video>
+        <p id="cameraStatus">Camera scanner is starting...</p>
+      </section>
+
+      <section class="table-wrap" aria-label="Saved products">
+        <table>
+          <thead id="tableHead"></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+        <p id="emptyState" class="empty-state">No products saved yet. Scan a code to create the first row.</p>
+      </section>
+
+      <div id="settingsModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+        <div class="modal-backdrop" data-close-settings></div>
+        <section class="settings-panel" aria-label="Settings">
+          <div class="settings-header">
+            <div>
+              <h2 id="settingsTitle">Settings</h2>
+              <p>Rename, hide, remove, or add table columns.</p>
+            </div>
+            <button id="closeSettings" type="button" class="secondary">Close</button>
+          </div>
+          <div class="column-add">
+            <input id="newColumnName" type="text" placeholder="New column name" />
+            <button id="addColumn" type="button">Add Column</button>
+          </div>
+          <div id="columnList" class="column-list"></div>
+        </section>
+      </div>
+    </main>
+
+    <template id="rowActionsTemplate">
+      <button type="button" class="row-action duplicate">Duplicate</button>
+      <button type="button" class="row-action delete">Delete</button>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
