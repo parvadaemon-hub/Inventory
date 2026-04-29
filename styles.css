@@ -18,7 +18,13 @@
 
 body {
   margin: 0;
+<<<<<<< HEAD
   min-height: 100vh;
+=======
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+>>>>>>> dropdown-menu-and-visual-changes
   background: var(--bg);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
@@ -84,14 +90,30 @@ select:focus {
 
 .app-shell {
   display: grid;
+<<<<<<< HEAD
   gap: 16px;
   margin: 0 auto;
   max-width: 1280px;
   padding: 20px;
+=======
+  grid-template-rows: auto auto auto auto minmax(0, 1fr);
+  gap: 16px;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0;
+  max-width: none;
+  min-height: 0;
+  padding: 20px;
+  width: 100%;
+>>>>>>> dropdown-menu-and-visual-changes
 }
 
 .toolbar,
 .scan-panel,
+<<<<<<< HEAD
+=======
+.dataset-panel,
+>>>>>>> dropdown-menu-and-visual-changes
 .table-wrap,
 .camera-panel,
 .settings-panel {
@@ -136,6 +158,48 @@ p {
   gap: 8px;
 }
 
+<<<<<<< HEAD
+=======
+.menu-wrap {
+  position: relative;
+}
+
+.main-menu {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(31, 41, 51, 0.16);
+  display: grid;
+  gap: 6px;
+  min-width: 180px;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  z-index: 5;
+}
+
+.main-menu.hidden {
+  display: none;
+}
+
+.main-menu button {
+  justify-content: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.main-menu button:not(.danger) {
+  background: #ffffff;
+  border-color: transparent;
+  color: var(--text);
+}
+
+.main-menu button:not(.danger):hover {
+  background: #eef2f6;
+}
+
+>>>>>>> dropdown-menu-and-visual-changes
 .brand-block {
   display: grid;
   gap: 6px;
@@ -151,6 +215,7 @@ p {
 
 .scan-panel {
   display: grid;
+<<<<<<< HEAD
   gap: 6px;
   padding: 10px;
 }
@@ -159,6 +224,11 @@ p {
   font-size: 13px;
 }
 
+=======
+  padding: 10px;
+}
+
+>>>>>>> dropdown-menu-and-visual-changes
 .scan-button {
   min-width: 76px;
 }
@@ -173,6 +243,30 @@ p {
   display: none;
 }
 
+<<<<<<< HEAD
+=======
+.dataset-panel {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.dataset-panel label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dataset-panel select {
+  text-align: left;
+  text-align-last: left;
+  width: auto;
+  min-width: 118px;
+}
+
+>>>>>>> dropdown-menu-and-visual-changes
 #cameraPreview {
   background: #101820;
   border-radius: 8px;
@@ -209,14 +303,22 @@ p {
 }
 
 .table-wrap {
+<<<<<<< HEAD
   min-height: 260px;
+=======
+  min-height: 0;
+>>>>>>> dropdown-menu-and-visual-changes
   overflow: auto;
   position: relative;
 }
 
 table {
   border-collapse: collapse;
+<<<<<<< HEAD
   min-width: 980px;
+=======
+  min-width: max(980px, 100%);
+>>>>>>> dropdown-menu-and-visual-changes
   width: 100%;
 }
 
@@ -237,10 +339,38 @@ th {
   z-index: 1;
 }
 
+<<<<<<< HEAD
 td input,
 td select {
   border-color: transparent;
   min-width: 130px;
+=======
+th.align-right,
+td.align-right {
+  text-align: right;
+}
+
+td.align-right input,
+td.align-right select {
+  text-align: right;
+  text-align-last: right;
+}
+
+th.actions-header {
+  text-align: right;
+}
+
+td input,
+td select {
+  border-color: transparent;
+  max-width: 100%;
+  min-width: 5ch;
+  width: auto;
+}
+
+td select {
+  padding-right: 28px;
+>>>>>>> dropdown-menu-and-visual-changes
 }
 
 td input:focus,
@@ -249,6 +379,7 @@ td select:focus {
 }
 
 .actions-cell {
+<<<<<<< HEAD
   display: flex;
   gap: 6px;
   min-width: 170px;
@@ -259,6 +390,28 @@ td select:focus {
   color: #344250;
   min-height: 34px;
   padding: 0 10px;
+=======
+  min-width: 92px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.row-action {
+  align-items: center;
+  background: #eef2f6;
+  color: #344250;
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0;
+  width: 34px;
+}
+
+.row-action + .row-action {
+  margin-left: 6px;
+>>>>>>> dropdown-menu-and-visual-changes
 }
 
 .row-action:hover {
@@ -320,11 +473,19 @@ td select:focus {
 
 @media (max-width: 760px) {
   .app-shell {
+<<<<<<< HEAD
+=======
+    gap: 12px;
+>>>>>>> dropdown-menu-and-visual-changes
     padding: 12px;
   }
 
   .toolbar,
   .toolbar-actions,
+<<<<<<< HEAD
+=======
+  .dataset-panel,
+>>>>>>> dropdown-menu-and-visual-changes
   .column-add {
     align-items: stretch;
     flex-direction: column;
@@ -332,13 +493,25 @@ td select:focus {
 
   .scan-row {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: auto minmax(0, 1fr) auto;
+=======
+    grid-template-columns: auto auto minmax(0, 1fr);
+>>>>>>> dropdown-menu-and-visual-changes
   }
 
   .toolbar {
     align-items: stretch;
   }
 
+<<<<<<< HEAD
+=======
+  .main-menu {
+    position: static;
+    width: 100%;
+  }
+
+>>>>>>> dropdown-menu-and-visual-changes
   .column-item {
     grid-template-columns: 1fr;
   }

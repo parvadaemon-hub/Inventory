@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# Inventory
+Product inventory
+=======
+>>>>>>> dropdown-menu-and-visual-changes
 # Product Scanner Table
 
 A small Python-powered local web app for saving barcode or QR scan results into an editable table.
@@ -22,6 +29,13 @@ Code, Model, IMEI, Storage, Grade, Battery Life, Week, Buying Price, Selling Pri
 
 You can rename, hide, remove, and add columns from the Columns panel. When opened through the Python server, data is saved to `scanner-data.json` in this folder.
 
+<<<<<<< HEAD
+=======
+## Suppliers
+
+Use the supplier dropdown above the table to switch between `SCAL`, `JAPAN`, `REFURBLY`, and `VISTA`. All suppliers share the same table columns, but each supplier keeps its own rows.
+
+>>>>>>> dropdown-menu-and-visual-changes
 ## Export
 
 Use **Export CSV** to download the visible table columns as a CSV file.
@@ -35,3 +49,7 @@ From this folder, run:
 ```
 
 Then open `http://localhost:8080`.
+<<<<<<< HEAD
+=======
+>>>>>>> fc1fb13 (Initial product scanner app)
+>>>>>>> dropdown-menu-and-visual-changes
