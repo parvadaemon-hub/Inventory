@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Scanner Table</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="toolbar">
+        <div class="brand-block">
+          <img class="site-logo" src="assets/phonecircle-logo.svg" alt="PHONECIRCLE" />
+          <h1>Inventory List</h1>
+        </div>
+        <div class="toolbar-actions">
+          <button id="cameraToggle" type="button">Camera Scan</button>
+          <div class="menu-wrap">
+            <button id="menuToggle" type="button" class="secondary" aria-haspopup="true" aria-expanded="false">
+              Menu
+            </button>
+            <div id="mainMenu" class="main-menu hidden" role="menu">
+              <button id="openSettings" type="button" role="menuitem">Settings</button>
+              <button id="exportCsv" type="button" role="menuitem">Export CSV</button>
+              <button id="clearRows" type="button" role="menuitem" class="danger">Clear Rows</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scan-panel" aria-label="Scanner input">
+        <div class="scan-row">
+          <button id="scanFocus" type="button" class="scan-button">Scan</button>
+          <button id="addScan" type="button">Add</button>
+          <input
+            id="scanInput"
+            type="search"
+            autocomplete="off"
+            placeholder="Scan barcode/QR code or search saved products"
+            autofocus
+          />
+        </div>
+      </section>
+
+      <section id="cameraPanel" class="camera-panel hidden" aria-label="Camera scanner">
+        <video id="cameraPreview" playsinline muted></video>
+        <p id="cameraStatus">Camera scanner is starting...</p>
+      </section>
+
+      <section class="dataset-panel" aria-label="Supplier selector">
+        <label for="datasetSelect">Supplier</label>
+        <select id="datasetSelect"></select>
+      </section>
+
+      <section class="table-wrap" aria-label="Saved products">
+        <table>
+          <thead id="tableHead"></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+        <p id="emptyState" class="empty-state">No products saved yet. Scan a code to create the first row.</p>
+      </section>
+
+      <div id="settingsModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+        <div class="modal-backdrop" data-close-settings></div>
+        <section class="settings-panel" aria-label="Settings">
+          <div class="settings-header">
+            <div>
+              <h2 id="settingsTitle">Settings</h2>
+              <p>Rename, hide, remove, or add table columns.</p>
+            </div>
+            <button id="closeSettings" type="button" class="secondary">Close</button>
+          </div>
+          <div class="column-add">
+            <input id="newColumnName" type="text" placeholder="New column name" />
+            <button id="addColumn" type="button">Add Column</button>
+          </div>
+          <div id="columnList" class="column-list"></div>
+        </section>
+      </div>
+    </main>
+
+    <template id="rowActionsTemplate">
+      <button type="button" class="row-action duplicate">Duplicate</button>
+      <button type="button" class="row-action delete">Delete</button>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

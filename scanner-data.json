@@ -1,0 +1,66 @@
+{
+  "columns": [
+    {
+      "id": "72849cae-e050-4bef-99c4-c66fab6d5a4a",
+      "name": "Code",
+      "visible": false
+    },
+    {
+      "id": "6360f72e-ccc0-4dcf-8a6e-76665117c3f3",
+      "name": "Model",
+      "visible": true
+    },
+    {
+      "id": "8ae73a8d-932e-412d-98f8-98143d6bb1d1",
+      "name": "IMEI",
+      "visible": true
+    },
+    {
+      "id": "1e4c3472-fed2-4638-b6b8-a59cbd2d914b",
+      "name": "Storage",
+      "visible": true
+    },
+    {
+      "id": "c9ef0f9d-fcdf-4c59-bdda-2b29ab17378e",
+      "name": "Grade",
+      "visible": true
+    },
+    {
+      "id": "5c833a30-80b4-4e95-a735-dd753357029e",
+      "name": "Battery Life",
+      "visible": true
+    },
+    {
+      "id": "bdd873ae-1f28-48a9-8149-418eab94fa1a",
+      "name": "Week",
+      "visible": true
+    },
+    {
+      "id": "1ec6cc32-d501-4889-8920-bc78f6bbee3d",
+      "name": "Buying Price",
+      "visible": true
+    },
+    {
+      "id": "91a4384b-4d05-4690-8156-ac5c061beff3",
+      "name": "Selling Price",
+      "visible": true
+    }
+  ],
+  "activeDataset": "SCAL",
+  "datasets": {
+    "SCAL": [
+      {
+        "6360f72e-ccc0-4dcf-8a6e-76665117c3f3": "iPhone 11",
+        "1e4c3472-fed2-4638-b6b8-a59cbd2d914b": "64 GB",
+        "c9ef0f9d-fcdf-4c59-bdda-2b29ab17378e": "B",
+        "5c833a30-80b4-4e95-a735-dd753357029e": "85%",
+        "bdd873ae-1f28-48a9-8149-418eab94fa1a": "18",
+        "1ec6cc32-d501-4889-8920-bc78f6bbee3d": "1200kr",
+        "91a4384b-4d05-4690-8156-ac5c061beff3": "2590kr"
+      }
+    ],
+    "JAPAN": [],
+    "REFURBLY": [],
+    "VISTA": []
+  }
+}
